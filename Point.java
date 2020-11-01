@@ -28,8 +28,7 @@ public class Point {
     double thisY= this.getY();
 
     double distance = Math.sqrt( ((otherX - thisX)*(otherX - thisX)) + ((otherY - thisY)*(otherY - thisY)) );
-    double round = Math.round(distance*10000) / 10000.0;
-    return round;
+    return distance;
   }
 
   public boolean equals(Point other) {
