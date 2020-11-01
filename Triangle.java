@@ -19,5 +19,14 @@ public class Triangle {
     double length3 = v2.distanceTo(v3);
     return length1 + length2 + length3;
   }
-  
+
+  public double getArea() {
+    double semi = this.getPerimeter() / 2.0;
+    double lengthA = v1.distanceTo(v2);
+    double lengthB = v1.distanceTo(v3);
+    double lengthC = v2.distanceTo(v3);
+
+    double area =  Math.sqrt( semi * (semi-lengthA) * (semi-lengthB) * (semi-lengthC));
+    return area;
+  }
 }
