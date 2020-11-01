@@ -23,5 +23,6 @@ public class PointTester {
     Triangle a = new Triangle(p1, p2, p3);
     System.out.println(a.getPerimeter()); // should be around 3.414
     System.out.println(a.getArea()); // should be 0.5
+    System.out.println(a.classify()); // should be isosceles
   }
 }

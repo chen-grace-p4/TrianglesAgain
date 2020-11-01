@@ -29,4 +29,22 @@ public class Triangle {
     double area =  Math.sqrt( semi * (semi-lengthA) * (semi-lengthB) * (semi-lengthC));
     return area;
   }
+
+  public String classify() {
+    double lengthA = v1.distanceTo(v2);
+    double lengthB = v1.distanceTo(v3);
+    double lengthC = v2.distanceTo(v3);
+
+    double length1 = Math.round(lengthA*10000) / 10000.0;
+    double length2 = Math.round(lengthB*10000) / 10000.0;
+    double length3 = Math.round(lengthC*10000) / 10000.0;
+
+    if (length1 == length2 && length2 == length3) {
+        return "equilateral";
+    } else if (length1 == length2 || length1 == length3 || length2 == length3) {
+      return "isosceles";
+    } else {
+      return "scalene";
+    }
+  }
 }
