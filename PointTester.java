@@ -19,11 +19,16 @@ public class PointTester {
     Point p1 = new Point(0,0);
     Point p2 = new Point(1,0);
     Point p3 = new Point(0,1);
+    Point newp = new Point (0,2);
 
     Triangle a = new Triangle(p1, p2, p3);
-    System.out.println(a.getPerimeter()); // should be around 3.414
-    System.out.println(a.getArea()); // should be 0.5
-    System.out.println(a.classify()); // should be isosceles
-    System.out.println(a.toString()); // should be "v1(0,0) v2(1,0 v3(0,1))"
+    // System.out.println(a.getPerimeter()); // should be around 3.414
+    // System.out.println(a.getArea()); // should be 0.5
+    // System.out.println(a.classify()); // should be isosceles
+    // System.out.println(a.toString()); // should be "v1(0,0) v2(1,0) v3(0,1)"
+    a.setVertex(2, newp);
+    System.out.println(a.toString()); // should be "v1(0,0) v2(1,0) v3(0,2)"
+    a.setVertex(0, newp);
+    System.out.println(a.toString()); // should be "v1(0,2) v2(1,0) v3(0,2)"
   }
 }

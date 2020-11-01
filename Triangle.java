@@ -76,5 +76,4 @@ public class Triangle {
       v3 = newP;
     }
   }
-
 }
