@@ -21,4 +21,14 @@ public class Point {
     return y;
   }
 
+  public double distanceTo(Point other) {
+    double otherX = other.getX();
+    double otherY = other.getY();
+    double thisX = this.getX();
+    double thisY= this.getY();
+
+    double distance = Math.sqrt( ((otherX - thisX)*(otherX - thisX)) + ((otherY - thisY)*(otherY - thisY)) );
+    double round = Math.round(distance*10000) / 10000.0;
+    return round;
+  }
 }
