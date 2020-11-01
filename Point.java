@@ -31,4 +31,8 @@ public class Point {
     double round = Math.round(distance*10000) / 10000.0;
     return round;
   }
+
+  public boolean equals(Point other) {
+    return other.getX() == this.getX() && other.getY() == this.getY();
+  }
 }
