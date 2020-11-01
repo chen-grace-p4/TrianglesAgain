@@ -24,5 +24,6 @@ public class PointTester {
     System.out.println(a.getPerimeter()); // should be around 3.414
     System.out.println(a.getArea()); // should be 0.5
     System.out.println(a.classify()); // should be isosceles
+    System.out.println(a.toString()); // should be "v1(0,0) v2(1,0 v3(0,1))"
   }
 }

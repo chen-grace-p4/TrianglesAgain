@@ -47,4 +47,21 @@ public class Triangle {
       return "scalene";
     }
   }
+
+  public String toString() {
+    double p1x = v1.getX();
+    double p1y = v1.getY();
+
+    double p2x = v2.getX();
+    double p2y = v2.getY();
+
+    double p3x = v3.getX();
+    double p3y = v3.getY();
+
+    String retstring = "";
+    retstring += "v1(" + p1x + ", " + p1y + ") ";
+    retstring += "v2(" + p2x + ", " + p2y + ") ";
+    retstring += "v3(" + p3x + ", " + p3y + ")";
+    return retstring;
+  }
 }
